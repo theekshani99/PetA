@@ -1,19 +1,11 @@
 <?php
 require 'db.php';
 session_start();
-
- 
-$nic="";
-$fname="";
-$mobileno="";
-$email="";
-$address="";
-$details="";
-
+$nic ="";
 if(isset($_SESSION["nic"]) ){
    $nic =$_SESSION["nic"];
 }else{
-  // header("location:login.php");
+   //header("location:login.php");
 }
 ?>
 
@@ -48,7 +40,7 @@ if(isset($_SESSION["nic"]) ){
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="../updateVetProfile.php">
                         <i class="uil uil-user"></i>
                         <span class="link-name">Update Profile</span>
                     </a></li>
@@ -68,7 +60,7 @@ if(isset($_SESSION["nic"]) ){
                         <i class="uil uil-comments"></i>
                         <span class="link-name">Feedbacks</span>
                     </a></li>
-                    <li><a href="#">
+                <li><a href="#">
                         <i class="uil uil-chat"></i>
                         <span class="link-name">Free Consultation</span>
                     </a></li>
@@ -90,126 +82,103 @@ if(isset($_SESSION["nic"]) ){
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
         </div>
-        <div style="padding-bottom: 20px;">
-
-
-            <p>
-                hbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbzhbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbzhbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbz
-            </p>
-            <p>hbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbzhbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbzhbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbz
-            </p>
-
-
-            <p>hbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbzhbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbzhbgdhcsbbsjchbscjhbsfbidkjsdnvkjnxcvbcxzhvlfhsbz
-            </p>
-            
-
-        </div>
-
-        <?php
-                
-               
-               
-                // $sql = "SELECT nic,fname,mobileno,email,address,details FROM serviceprovider WHERE nic = '$nic'" ;
-                 $sql = "SELECT * FROM serviceprovider WHERE nic = '$nic'" ;
-
-                $result = mysqli_query($con, $sql);
-
-                if($result==TRUE){
-
-                    $count_rows = mysqli_num_rows($result);
-
-                 //  $_SESSION['nic'];
-
-                    if($count_rows > 0){
-                        while($row = mysqli_fetch_assoc($result)){
-                            
-                            $nic= $row['nic'];
-                            $fname=$row['fname'];
-                            $mobileno=$row['mobileno'];
-                            $email=$row['email'];
-                            $address=$row['address'];
-                            $details=$row['details'];
-                        }
-                    }
-                }
-                
-            ?>
-  
-  <div>
-                        <table>
-                        <tr>
-                                <th>NIC</th>
-                                <th style="border: 1px solid #071D70;border-radius:10px;color:black"><?php echo $nic ?></th>
-                            </tr>
-                            <tr>
-                                <th>Name </th>
-                                <th style="border: 1px solid #071D70;border-radius:10px;color:black"><?php echo $fname ?></th>
-                            </tr>
-                            <tr>
-                                <th>Employee&nbsp;Id </th>
-                                <th style="border: 1px solid #071D70;border-radius:10px;color:black"><?php echo $mobileno?></th>
-                            </tr>
-                            <tr>
-                                <th>Department </th>
-                                <th style="padding:8px 70px;border: 1px solid #071D70;border-radius:10px;color:black"><?php echo $email ?></th>
-                            </tr>
-                            <tr>
-                                <th>Job&nbsp;Role </th>
-                                <th style="border: 1px solid #071D70;border-radius:10px;color:black"><?php echo $address ?></th>
-                            </tr>
-                            <tr>
-                                <th>Email </th>
-                                <th style="border: 1px solid #071D70;border-radius:10px;color:black"><?php echo $details ?></th>
-                            </tr>
-                           
-                        </table>
-                    </div>            
-
-            
+        <div style="padding-bottom: 20px;"></div>
         <center>
-            <div style="height:280px; width: 700px;overflow:scroll;border: 0px solid #ddd;">
-                <div class="days">
-                    <div class="day">
-                        <div class="datelabel"><strong>Friday</strong><br />August 23</div>
-                        <div class="timeslot">9:00am</div>
-                        <div class="timeslot">9:30am</div>
-                        <div class="timeslot">10:00am</div>
-                        <div class="timeslot">10:40am</div>
-                    </div>
-                    <div class="day">
-                        <div class="datelabel"><strong>Saturday</strong><br />August 24</div>
-                        <div class="timeslot">8:30pm</div>
-                        <div class="timeslot">9:30am</div>
-                        <div class="timeslot">10:00am</div>
-                    </div>
-                    <div class="day">
-                        <div class="datelabel"><strong>Sunday</strong><br />August 25</div>
-                        <div class="timeslot">8:30pm</div>
-                        <div class="timeslot">9:30am</div>
-                        <div class="timeslot">10:00am</div>
-                    </div>
-                    <div class="day">
-                        <div class="datelabel"><strong>Monday</strong><br />August 26</div>
-                        <div class="timeslot">8:30pm</div>
-                        <div class="timeslot">9:30am</div>
-                        <div class="timeslot">10:00am</div>
-                    </div>
-                    <div class="day">
-                        <div class="datelabel"><strong>Tuesday</strong><br />August 27</div>
-                        <div class="timeslot">8:30pm</div>
-                        <div class="timeslot">9:30am</div>
-                        <div class="timeslot">10:00am</div>
-                    </div>
-                    <div class="day">
-                        <div class="datelabel"><strong>Wednesday</strong><br />August 28</div>
+        <table class="styled-table" cellspacing=0 cellpadding=30>
+      
+      <?php
+    
+      $rows = mysqli_query($con, "SELECT * FROM tb_upload ORDER BY id DESC")
+      ?>
 
-                        <div class="timeslot">9:30am</div>
-                        <div class="timeslot">10:00am</div>
-                    </div>
+      <?php foreach ($rows as $row) : ?>
+    
+        <!--<td><?php echo $i++; ?></td>
+        <td><?php echo $row["name"]; ?></td>-->
+        <td> 
+            <img src="../img/<?php echo $row["image"]; ?>" width = 200 height=250 title="<?php echo $row['image']; ?>">
+         </td>
+      
+      <?php endforeach; ?>
+    </table>
+        </center>
+       
+    <?php
+
+$sql = "SELECT * FROM serviceprovider WHERE nic = '$nic'" ;
+
+if ($result = mysqli_query($con, $sql))
+ {
+   
+  
+    if (mysqli_num_rows($result) > 0) {
+     
+        
+        while ($row = mysqli_fetch_array($result)) {
+           
+
+            echo " <div style='text-align:left;'>";
+            echo "<div class='info'><strong>Name:</strong> <span>" . $row['fname'] . "</span></div>";
+            echo "<div class='info'><strong>Mobile:</strong> <span>" . $row['mobileno'] . "</span></div>";
+            echo "<div class='info'><strong>Email:</strong> <span>" . $row['email'] . "</span></div>";
+            echo "<div class='info'><strong>Address:</strong> <span>" . $row['address'] . "</span></div>";
+            echo "<div class='info'><strong>User Description:</strong> <span>" . $row['details'] . "</span></div>";
+        }
+        
+    }
+   
+}
+            
+            ?>
+            
+       
+<center>
+
+
+
+        <div style="height:280px; width: 700px;overflow:scroll;border: 0px solid #ddd;">
+            <div class="days">
+                <div class="day">
+                    <div class="datelabel"><strong>Friday</strong><br />August 23</div>
+                    <div class="timeslot">9:00am</div>
+                    <div class="timeslot">9:30am</div>
+                    <div class="timeslot">10:00am</div>
+                    <div class="timeslot">10:40am</div>
+                </div>
+                <div class="day">
+                    <div class="datelabel"><strong>Saturday</strong><br />August 24</div>
+                    <div class="timeslot">8:30pm</div>
+                    <div class="timeslot">9:30am</div>
+                    <div class="timeslot">10:00am</div>
+                </div>
+                <div class="day">
+                    <div class="datelabel"><strong>Sunday</strong><br />August 25</div>
+                    <div class="timeslot">8:30pm</div>
+                    <div class="timeslot">9:30am</div>
+                    <div class="timeslot">10:00am</div>
+                </div>
+                <div class="day">
+                    <div class="datelabel"><strong>Monday</strong><br />August 26</div>
+                    <div class="timeslot">8:30pm</div>
+                    <div class="timeslot">9:30am</div>
+                    <div class="timeslot">10:00am</div>
+                </div>
+                <div class="day">
+                    <div class="datelabel"><strong>Tuesday</strong><br />August 27</div>
+                    <div class="timeslot">8:30pm</div>
+                    <div class="timeslot">9:30am</div>
+                    <div class="timeslot">10:00am</div>
+                </div>
+                <div class="day">
+                    <div class="datelabel"><strong>Wednesday</strong><br />August 28</div>
+
+                    <div class="timeslot">9:30am</div>
+                    <div class="timeslot">10:00am</div>
                 </div>
             </div>
-        </center>
+        </div>
+</center>
+
         <script src="script.js"></script>
 
     </section>

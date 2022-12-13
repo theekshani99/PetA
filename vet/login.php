@@ -10,25 +10,28 @@ if (isset($_POST['but_submit'])) {
     $username = $_POST['username'];
     $pword = $_POST['pword'];
 
-    $sql = "SELECT `username`,`pword` FROM `serviceprovider`  WHERE username='$username' AND pword='$pword'";
+    $sql = "SELECT * FROM `serviceprovider`  WHERE username='$username' AND pword='$pword'";
     $result = mysqli_query($con, $sql);
 
-
     if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_array($result)){
-            // $nic=$row['nic'];
+        $row1 = mysqli_fetch_assoc($result);
         
-      $_SESSION['nic'] =$row['nic'];
-        }
-        header("Location:vetDashboard/vetDashboard.php");
-        
-    } else {
-        echo '<script> window.alert("Incorrect Username or password.Try Again");</script>';
-       
-    }
 
-    mysqli_close($con);
-}
+        if ($row1['username'] == $username && $row1['pword'] == $pword) {
+           
+            $_SESSION['nic'] = $row1['nic'];
+            header("Location:vetDashboard/vetDashboard.php");
+        }
+       
+        
+    } 
+
+           
+        } 
+       
+
+    
+
 
 ?>
 
