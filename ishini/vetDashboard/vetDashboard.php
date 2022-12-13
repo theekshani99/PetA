@@ -23,6 +23,23 @@ if(isset($_SESSION["nic"]) ){
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <title>PetAssure</title>
+    <style>
+    .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(0, 10, 0, 0.15);
+}
+.styled-table  tr {
+    background-color: #E0E0E0;
+    color: #ffffff;
+   
+}
+.styled-table  tr {
+    border-bottom: 1px solid #A6A6A6;
+}
+
+
+   </style>
 
 
 </head>
@@ -88,21 +105,21 @@ if(isset($_SESSION["nic"]) ){
       
       <?php
     
-      $rows = mysqli_query($con, "SELECT * FROM tb_upload ORDER BY id DESC")
+      $rows = mysqli_query($con, "SELECT * FROM tb_upload ")
       ?>
 
       <?php foreach ($rows as $row) : ?>
     
-        <!--<td><?php echo $i++; ?></td>
-        <td><?php echo $row["name"]; ?></td>-->
         <td> 
-            <img src="../img/<?php echo $row["image"]; ?>" width = 200 height=250 title="<?php echo $row['image']; ?>">
+            <img src="../img/<?php echo $row["image"]; ?>" width = 150 height=200 title="<?php echo $row['image']; ?>">
          </td>
       
       <?php endforeach; ?>
     </table>
-        </center>
-       
+      </center>
+    
+     
+       <div class="container">
     <?php
 
 $sql = "SELECT * FROM serviceprovider WHERE nic = '$nic'" ;
@@ -131,11 +148,12 @@ if ($result = mysqli_query($con, $sql))
             
             ?>
             
-       
+</div>
+</div>
+
+
+
 <center>
-
-
-
         <div style="height:280px; width: 700px;overflow:scroll;border: 0px solid #ddd;">
             <div class="days">
                 <div class="day">
@@ -183,7 +201,11 @@ if ($result = mysqli_query($con, $sql))
 
     </section>
 
-
+<div class="footerr" style="position:absolute; z-index: -1; width: 99%;">
+    <p> Telephone No: +94 11 233 5632
+        Fax: +94 11 233 5632
+        Email: petAssure@hotmail.com​</p>
+</div>
 </body>
 
 

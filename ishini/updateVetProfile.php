@@ -132,7 +132,7 @@ if(isset($_POST["submit"])){
           
             <?php
    
-      $rows = mysqli_query($con, "SELECT * FROM tb_upload ORDER BY id DESC")
+      $rows = mysqli_query($con, "SELECT * FROM tb_upload ")
       ?>
 
             <?php foreach ($rows as $row) : ?>
