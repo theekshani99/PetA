@@ -59,7 +59,7 @@ if(isset($_SESSION["nic"]) ){
             <ul class="nav-links">
                 <li><a href="../updateVetProfile.php">
                         <i class="uil uil-user"></i>
-                        <span class="link-name">Update Profile</span>
+                        <span class="link-name">User Profile</span>
                     </a></li>
                 <li><a href="#">
                         <i class="uil uil-bell"></i>
@@ -85,7 +85,7 @@ if(isset($_SESSION["nic"]) ){
             </ul>
 
             <ul class="logout-mode">
-                <li><a href="#">
+                <li><a href="../login.php">
                         <i class="uil uil-signout"></i>
                         <span class="link-name">Logout</span>
                     </a></li>

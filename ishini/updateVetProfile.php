@@ -137,9 +137,6 @@ if(isset($_POST["submit"])){
 
             <?php foreach ($rows as $row) : ?>
 
-            <!--<td><?php echo $i++; ?></td>
-        <td><?php echo $row["name"]; ?></td>-->
-
             <td> 
               <img src="img/<?php echo $row["image"]; ?>" width = 150 height=200 title="<?php echo $row['image']; ?>">
             </td>

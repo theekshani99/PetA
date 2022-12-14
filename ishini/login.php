@@ -22,11 +22,17 @@ if (isset($_POST['but_submit'])) {
             $_SESSION['nic'] = $row1['nic'];
             header("Location:vetDashboard/vetDashboard.php");
         }
-       
         
+    
+      
     } 
 
-           
+    else {
+        echo "<script type='text/javascript'>alert('Incorrect username or password');</script>";
+  
+       
+    }
+       
         } 
        
 
@@ -44,7 +50,10 @@ if (isset($_POST['but_submit'])) {
     <title>Login</title>
    
 
-    <style>/*
+    <style>
+    a{
+ text-decoration: none;
+ }/*
 .navigation-bar {
     width: 100%;  
     height: 80px; 
@@ -209,13 +218,13 @@ body {
                         </div>
 
                         <br>
-                        <div class="formlabel">Forgot Password? <a class="createlink" href="forgotPassword.php">Change
-                                Password</a></div>
+                        <div class="formlabel">Forgot Password? <a class="createlink" href="forgotPassword.php"><strong>Change
+                                Password</strong></a></div>
                         <br>
 
 
-                        <div class="formlabel">New User? <a class="createlink" href="signup.php">Create an
-                                Account</a></div>
+                        <div class="formlabel">New User? <a class="createlink" href="signup.php"><strong?>Create an
+                                Account</strong></a></div>
 
                     </form>
 
