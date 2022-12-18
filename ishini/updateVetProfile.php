@@ -117,7 +117,8 @@ if(isset($_POST["submit"])){
         <div class="page">
             <?php include 'navigation/navigation.php';?>
             <div class="body">
-                <p class="userProfile">User Profile</p>
+              <br><br>
+                <p class="userProfile">Update Profile</p>
                 <div style="margin-bottom:10px ;">
                     
 
@@ -172,10 +173,10 @@ if(isset($_POST["submit"])){
             <P>NIC</P>
             <p>Fullname</p>
             <p>Mobile Number</p>
-            <p>District</p>
+            <p>Address</p>
             <p>Email</p>
             <p>UserName</p>
-            <!-- <p>Password</p> -->
+            <p>Password</p> 
             <p>Description</p>
 
         </div>
@@ -194,9 +195,10 @@ if(isset($_POST["submit"])){
             <input type=" text" value="<?php echo $rows['district']; ?>">
             <input type="email" value="<?php echo $rows['email']; ?>">
             <input type="text" value="<?php echo $rows['username']; ?>">
+           
+            <input type="password" value="<?php echo $rows['pword']; ?>"> 
             <input type="text" value="<?php echo $rows['details']; ?>">
-            <!-- <input type="password" value="<?php echo $rows['password']; ?> -->
-          
+             
            <?php
            }
           ?>

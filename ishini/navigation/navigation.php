@@ -81,7 +81,7 @@ a.font{
             <a href="#" class="font">HOME</a>
             <a href="./vetDashboard/vetDashboard.php" class="font">PROFILE</a>
             <a href="#" class="font">SERVICES</a>
-            <a href="#" class="font">LOG OUT </a>
+            <a href="./logout.php" class="font">LOG OUT </a>
         </div>
     </div>
 

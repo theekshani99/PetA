@@ -19,6 +19,7 @@ if(isset($_SESSION["nic"]) ){
 
 
     <link rel="stylesheet" href="style_vetDashboard.css">
+    <script src="https://kit.fontawesome.com/ffeda24502.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
@@ -38,6 +39,7 @@ if(isset($_SESSION["nic"]) ){
     border-bottom: 1px solid #A6A6A6;
 }
 
+ 
 
    </style>
 
@@ -59,25 +61,25 @@ if(isset($_SESSION["nic"]) ){
             <ul class="nav-links">
                 <li><a href="../updateVetProfile.php">
                         <i class="uil uil-user"></i>
-                        <span class="link-name">User Profile</span>
+                        <span class="link-name">Update Profile</span>
                     </a></li>
-                <li><a href="#">
+                    <li><a href="../notifications/notifications.php">
                         <i class="uil uil-bell"></i>
                         <span class="link-name">Notifications</span>
                     </a></li>
-                <li><a href="#">
+                    <li><a href="../history/history.php">
                         <i class="uil uil-history"></i>
                         <span class="link-name">History</span>
                     </a></li>
-                <li><a href="#">
+                    <li><a href="../appointments/appointments.php">
                         <i class="uil uil-calender"></i>
                         <span class="link-name">Appointments</span>
                     </a></li>
-                <li><a href="#">
+                    <li><a href="../feedbacks/feedbacks.php">
                         <i class="uil uil-comments"></i>
                         <span class="link-name">Feedbacks</span>
                     </a></li>
-                <li><a href="#">
+                    <li><a href="../freeConsultation/freeConsultation.php">
                         <i class="uil uil-chat"></i>
                         <span class="link-name">Free Consultation</span>
                     </a></li>
@@ -111,6 +113,8 @@ if(isset($_SESSION["nic"]) ){
       <?php foreach ($rows as $row) : ?>
     
         <td> 
+       
+           
             <img src="../img/<?php echo $row["image"]; ?>" width = 150 height=200 title="<?php echo $row['image']; ?>">
          </td>
       
@@ -122,7 +126,7 @@ if(isset($_SESSION["nic"]) ){
        <div class="container">
     <?php
 
-$sql = "SELECT * FROM serviceprovider WHERE nic = '$nic'" ;
+$sql = "SELECT * FROM serviceprovider-vet WHERE nic = '$nic'" ;
 
 if ($result = mysqli_query($con, $sql))
  {
@@ -135,11 +139,11 @@ if ($result = mysqli_query($con, $sql))
            
 
             echo " <div style='text-align:left;'>";
-            echo "<div class='info'><strong>Name:</strong> <span>" . $row['fname'] . "</span></div>";
-            echo "<div class='info'><strong>Mobile:</strong> <span>" . $row['mobileno'] . "</span></div>";
-            echo "<div class='info'><strong>Email:</strong> <span>" . $row['email'] . "</span></div>";
-            echo "<div class='info'><strong>Location:</strong> <span>" . $row['address'] . "</span></div>";
-            echo "<div class='info'><strong>User Description:</strong> <span>" . $row['details'] . "</span></div>";
+            echo "<div class='info'><strong>  <i class='fa-solid fa-user'></i>   :</strong> <span>" . $row['fname'] . "</span></div>";
+            echo "<div class='info'><strong><i class='fa-solid fa-phone-volume'></i>   :</strong> <span>" . $row['mobileno'] . "</span></div>";
+            echo "<div class='info'><strong><i class='fa-solid fa-envelope'></i>   :</strong> <span>" . $row['email'] . "</span></div>";
+            echo "<div class='info'><strong><i class='fa-solid fa-location-dot'></i>   :</strong> <span>" . $row['address'] . "</span></div>";
+            echo "<div class='info'><strong><i class='fa-sharp fa-solid fa-folder-open'></i>   :</strong> <span>" . $row['details'] . "</span></div>";
         }
         
     }
@@ -159,8 +163,8 @@ if ($result = mysqli_query($con, $sql))
                 <div class="day">
                     <div class="datelabel"><strong>Friday</strong><br />August 23</div>
                     <div class="timeslot">9:00am</div>
-                    <div class="timeslot">9:30am</div>
-                    <div class="timeslot">10:00am</div>
+                    <div class="timeslot" style =" background-color:red">9:30am</div>
+                    <div class="timeslot" style =" background-color:green">10:00am</div>
                     <div class="timeslot">10:40am</div>
                 </div>
                 <div class="day">

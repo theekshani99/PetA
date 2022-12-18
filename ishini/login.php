@@ -224,8 +224,10 @@ body {
                         <br>
 
 
-                        <div class="formlabel">New User? <a class="createlink" href="signup.php"><strong?>Create an
-                                Account</strong></a></div>
+                        <div class="formlabel">New User?<br> <a class="createlink" href="signup.php"><strong?>Sign Up as a service provider</strong></a><br>
+
+
+                                <a class="createlink" href="signup.php"><strong?>Sign Up as a Client</strong></a></div>
 
                     </form>
 

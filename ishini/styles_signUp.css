@@ -1,3 +1,14 @@
+
+body {
+  background-image: url("Images/bg2.PNG");
+  
+  height: 100%; 
+
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .left {
   flex: 0.5;
   display: flex;
@@ -54,7 +65,7 @@ a.font {
 }
 .form_left p {
   text-align: left;
-  font-size: 18px;
+  font-size: 20px;
   color: black;
   padding: 2px 10px 2px 10px;
   font-weight: 550;
@@ -85,7 +96,8 @@ a.font {
 }
 
 .form_right input {
-  padding: 13px 145px 7px 10px;
+  /* padding: 13px 145px 7px 10px; */
+  padding: 18px 145px 7px 14px;
   border-radius: 0px;
   border: #a6a6a6;
   margin: 2px 10px 10px 10px;
@@ -110,11 +122,11 @@ a.font {
   height: 40px;
   opacity: 60%;
   background-color: #373844;
-  padding: 2px 10px 0px 2px;
+  padding: 2px 10px 0px 0px;
   font-size: small;
   color: white;
   text-align: center;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 .form_file {
   border-radius: 10px;

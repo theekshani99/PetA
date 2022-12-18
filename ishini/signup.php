@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     if (mysqli_query($con, $sql))
      {
         echo '<script type="text/javascript"> alert("Congragulations. your account was created.")</script>';
-        header("Location:vetDashboard/vetDashboard.php");
+        header("Location:login.php");
         exit();
      }
     else
@@ -95,19 +95,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     <div>
         <div class="left_body_signup">
-            <img src="Images/fe436bc67fd6315ac0deebf8b78194ab.jpg" width="80%" height="250px" /><br><br>
-
-            <form class="file" method="post" >
+          
+            <img src="Images/fe436bc67fd6315ac0deebf8b78194ab.jpg" width="80%" height="250px">
+            
+            <p class="tst">Verification Proofs <br>
+                    (The proofs and job experience you have are included in a PDF document that you should upload.)</p>
+           
                 <input class="form_file" type="file" name="file" class="form-control">
-                <p class="tst">Verification Proofs <br>
-                    (upload the proofs that we have asked above.)</p>
+                
 
-
-                <div id="validate">
+<div>
+            
                     <p><b>**Password must contain:</b></p>
                     <p style="font-size: 12px;" >A <b>lowercase</b> letter ,a <b>capital (uppercase)</b> letter ,a  <b>number</b> and minimum <b>8 characters</b></p>
                 </div>
-            </form>
+          
             <form action="signup.php" method="post">
         </div>
         <div class="right_body_signup">
@@ -120,12 +122,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 <p>Email Address</p>
                 <p>Address</p>
                 <p>District</p>
-                <p>UserName</p>
+                <!-- <p>UserName</p>
                 <p>Password*</p>
-                <p>Confirm Password</p>
+                <p>Confirm Password</p> -->
                 <p>Service type you providing</p>
                 <p>Description</p>
-               
+               <br><br>
                 <button class="form_btn">Submit</button>
             </div>
             <div class="form_right">
@@ -138,10 +140,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     <input type="email" name="email" placeholder="abc@gmail.com"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required />
                     <input type=" text" name="address" placeholder="Enter Address"required  />
                     <input type="text" name="district" placeholder="Enter District" required />
-                    <input type="text" name="username" placeholder="Enter UserName" required />
+                    <!-- <input type="text" name="username" placeholder="Enter UserName" required />
                     <input type="password" name="pword" placeholder="Enter Password"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,30}" required />
-                    <input type="password" name="pword" placeholder="Enter Password "required  />
+                    <input type="password" name="pword2" placeholder="Re-enter Password "required  /> -->
                     <select name="stype" id="">
                         <option value="vet">Veterinarian</option>
                         <option value="groom">Grooming Service Supplier</option>
