@@ -129,7 +129,7 @@ if(isset($_SESSION["nic"]) ){
   border-radius: 50%;"> 
          <div class="container">
       <p>
-        hfhgfdbgkdd
+        Hello Doctor
       </p>
         
     </div>
@@ -140,7 +140,7 @@ if(isset($_SESSION["nic"]) ){
    
     <div class="container">
         
-        <p>Sweet! So, what do you wanna do today?</p>
+        <p>This is Karin Fernandez with Goldie.She’s still vomiting. Should we plan on seeing you in the AM or head over to the ER tonight?”</p>
         
     </div>
     <span class="time-right">11:02</span>
@@ -151,7 +151,7 @@ if(isset($_SESSION["nic"]) ){
   border-radius: 50%;">
     <div class="container darker">
        
-        <p><i class="fa fa-plus-circle" aria-hidden="true"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </i>    or learn more coding perhaps? &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+        <p><i class="fa fa-plus-circle" aria-hidden="true"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </i>    Should we plan on seeing.. &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
         <i class="fa fa-paper-plane" aria-hidden="true"></i> </p>
        
     </div>

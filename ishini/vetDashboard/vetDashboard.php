@@ -126,7 +126,7 @@ if(isset($_SESSION["nic"]) ){
        <div class="container">
     <?php
 
-$sql = "SELECT * FROM serviceprovider-vet WHERE nic = '$nic'" ;
+$sql = "SELECT * FROM serviceprovidervet WHERE nic = '$nic'" ;
 
 if ($result = mysqli_query($con, $sql))
  {
@@ -158,6 +158,8 @@ if ($result = mysqli_query($con, $sql))
 
 
 <center>
+    <p>Available Time Slots</p>
+    <br>
         <div style="height:280px; width: 700px;overflow:scroll;border: 0px solid #ddd;">
             <div class="days">
                 <div class="day">

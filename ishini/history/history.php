@@ -102,7 +102,7 @@ if(isset($_SESSION["nic"]) ){
             <tr>
                 <td>14/02/2020</td>
                 <td>214</td>
-                <td>hsdjndjndndsnlndlvdvdfvndvld</td>
+                <td>Pet therapy</td>
                 <td> <i class="fa fa-trash-o" aria-hidden="true"></i></td>
             </tr>
             <tr class="active-row">
@@ -111,19 +111,19 @@ if(isset($_SESSION["nic"]) ){
 
                 <td>215</td>
 
-                <td>hsdjndjndndsnlndlvdvdfvndvld</td>
+                <td>Pet therapy</td>
                 <td> <i class="fa fa-trash-o" aria-hidden="true"></i></td>
             </tr>
             <tr>
                 <td>15/03/2020</td>
                 <td>216</td>
-                <td>hsdjndjndndsnlndlvdvdfvndvld</td>
+                <td>Pet therapy</td>
                 <td> <i class="fa fa-trash-o" aria-hidden="true"></i></td>
             </tr>
             <tr class="active-row">
                 <td>15/03/2020</td>
                 <td>217</td>
-                <td>hsdjndjndndsnlndlvdvdfvndvld</td>
+                <td>Pet therapy</td>
                 <td> <i class="fa fa-trash-o" aria-hidden="true"></i></td>
             </tr>
             <!-- and so on... -->
